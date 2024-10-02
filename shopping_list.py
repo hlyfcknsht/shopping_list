@@ -1,0 +1,5 @@
+prod_file1 = open('shopping_list_1.txt', encoding='UTF-8').read().strip().split('\n')
+prod_file2 = open('shopping_list_2.txt', encoding='UTF-8').read().strip().split('\n')
+prod_file3 = open('shopping_list_3.txt', encoding='UTF-8').read().strip().split('\n')
+all_prod = sorted(set(prod_file1 + prod_file2 + prod_file3))
+new_file = open('shopping_list.txt', 'w', encoding='UTF-8').write('\n'.join(all_prod))
